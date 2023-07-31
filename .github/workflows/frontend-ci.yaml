@@ -7,15 +7,17 @@ on:
     paths:
       - "starter/frontend/**"
 
+
+defaults:
+  run:
+    working-directory: 'starter/frontend'
+
 jobs:
   lint:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [18.x]
-    defaults:
-      run:
-        working-directory: 'starter/frontend'
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
@@ -31,9 +33,6 @@ jobs:
     strategy:
       matrix:
         node-version: [18.x]
-    defaults:
-      run:
-        working-directory: 'starter/frontend'
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
@@ -51,9 +50,6 @@ jobs:
     strategy:
       matrix:
         node-version: [18.x]
-    defaults:
-      run:
-        working-directory: 'starter/frontend'
     steps:
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
