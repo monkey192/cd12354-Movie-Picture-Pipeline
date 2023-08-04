@@ -79,7 +79,7 @@ jobs:
       env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
       run: |
-          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG --build-arg REACT_APP_MOVIE_API_URL=abfe2cbbc85f74086b566dfeee64f79e-1860320616.us-east-1.elb.amazonaws.com .
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG --build-arg REACT_APP_MOVIE_API_URL=$REACT_APP_MOVIE_API_URL .
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
           echo "IMAGE_URI=$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" >> $GITHUB_ENV
 
