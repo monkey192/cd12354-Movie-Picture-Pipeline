@@ -93,5 +93,5 @@ jobs:
       run: |
         cd k8s
         kustomize edit set image backend-image-name=$IMAGE_URI
-        kubectl apply -f
+        kustomize build | kubectl apply -f -
 
