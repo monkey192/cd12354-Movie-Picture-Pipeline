@@ -4,3 +4,8 @@ resources:
   - service.yaml
   - deployment.yaml
 namespace: default
+images:
+- name: image-name
+  newName: backend
+  newTag: v1
+ 
