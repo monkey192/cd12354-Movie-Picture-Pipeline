@@ -92,6 +92,6 @@ jobs:
     - name: Deploy EKS
       run: |
         cd k8s
-        kustomize edit set image backend-image-uri=$IMAGE_URI
+        kustomize edit set image backend-image-name=$IMAGE_URI
         kubectl apply -f
 
