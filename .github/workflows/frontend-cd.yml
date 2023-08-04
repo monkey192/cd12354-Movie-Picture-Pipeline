@@ -11,7 +11,7 @@ env:
   WORKING_DIRECTORY: 'starter/frontend'
   AWS_REGION: us-east-1
   ECR_REPOSITORY: frontend
-  REACT_APP_MOVIE_API_URL: abfe2cbbc85f74086b566dfeee64f79e-1860320616.us-east-1.elb.amazonaws.com
+  REACT_APP_MOVIE_API_URL: http://abfe2cbbc85f74086b566dfeee64f79e-1860320616.us-east-1.elb.amazonaws.com
 
 defaults:
   run:
